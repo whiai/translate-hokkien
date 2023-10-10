@@ -1,0 +1,7 @@
+id	description	lang	date_created
+POJ-Standard-BLEU	Standard latin-based tokenizer for Pe̍h-ōe-jī (POJ). Uses nltk.tokenize.word_tokenize. Case insensitive.	nan_poj	20231010
+POJ-Standard-BLEU-1-gram	Individual 1-gram version of POJ-Standard-BLEU	nan_poj	20231010
+POJ-Standard-BLEU-2-gram	Individual 2-gram version of POJ-Standard-BLEU	nan_poj	20231010
+Hanzi-Graphemes-BLEU	Hanzi BLEU scorer, tokenized by Graphemes (hanzi characters) (rather than words).	nan_tc	20231010
+Hanzi-Graphemes-BLEU-1-gram	Individual 1-gram version of Hanzi-Graphemes-BLEU	nan_tc	20231010
+Hanzi-Graphemes-BLEU-2-gram	Individual 1-gram version of Hanzi-Graphemes-BLEU	nan_tc	20231010
