@@ -15,6 +15,7 @@
 	- Generated some EN→NAN translations (via GPT4 and GPT3.5)
 - Evaluations
 	- Generated several evaluations based on BLEU
+ 	- ![Evaluations](https://raw.githubusercontent.com/whiai/translate-hokkien/main/images/20231010-evaluations.png)	
 
 - **Conclusions and Next Steps**
 	- Results: The BLEU scores for these evaluations are quite bad, with only unigram scores showing any non-zero results. Things to try to improve this:
