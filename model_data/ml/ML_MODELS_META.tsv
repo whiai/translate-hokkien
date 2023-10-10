@@ -1,4 +1,4 @@
-id	description	source_lang	target_lang	date_created	Notes
+id	description	source_lang	target_lang	date_created	notes
 gpt3.5_en_nan01_poj	"GPT3.5-turbo
 20231005
 temperature: 0.2
