@@ -6,6 +6,7 @@
 
 ## Updates
 ### 2023-10-10
+- ![Data Models](https://github.com/whiai/translate-hokkien/blob/969de0244f372df7bfde60c52fb5fc50d373ab56/images/20231010-data-models.png?raw=true)
 - Reference Texts
 	- Gathered some reference text from Wikipedia (GFDL license) and Omniglot (Non-Commercial license)
 	- Cleaned up reference texts
