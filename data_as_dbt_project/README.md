@@ -1,6 +1,7 @@
 README.md
 
-# The ~/.dbt/profiles.yml is:
+# Setup Instructions
+## The ~/.dbt/profiles.yml is:
 
     translate_hokkien:
       outputs:
@@ -17,3 +18,11 @@ README.md
           #   - '/path/to/sqlite-digest/digest.so'
     
       target: dev
+
+# Commands that can be run
+
+- dbt parse
+- dbt build <- Might be more appropriate for the SQLite3 dbt Adapter
+- dbt run
+- dbt docs generate
+- dbt docs serve
