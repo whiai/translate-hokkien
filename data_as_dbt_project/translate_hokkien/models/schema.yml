@@ -2,7 +2,7 @@
 version: 2
 
 models:
-  - name: int_wiki
+  - name: dbt_int_wiki
     description: "A model that should contain the cleaned text_nan_poj data from stg_wiki."
     columns:
       - name: id
@@ -11,7 +11,7 @@ models:
           - unique
           - not_null
 
-  - name: stg_wiki
+  - name: dbt_stg_wiki
     description: "A model that reflects the Hokkien (NAN) Wiki Data"
     columns:
       - name: id
@@ -20,22 +20,26 @@ models:
           - unique
           - not_null
 
-  - name: mart_samples
+  - name: dbt_mart_samples
     description: "A mart of TestSet Data (aka Samples). Should technically be derived from INT_WIKI_TRANSL and STG_OMNIGLOT (though right now, it's just raw data)."
 
-  - name: ml_models_meta
+  - name: dbt_ml_models_meta
     description: "ML Models. Some of these are ML Pipelines, instead of individual models."
 
-  - name: ml_evaluators
+  - name: dbt_ml_evaluators
     description: "Evaluators. Mainly just based on BLEU scores for now."
 
-  - name: ml_testset_translations
+  - name: dbt_ml_testset_translations
     description: "Resulting translations of testset sample data using different ML_MODELS."
 
-  - name: ml_testset_evaluations
+  - name: dbt_ml_testset_evaluations
     description: "Resulting Evaluations on ml_testset_translations."
     columns:
       - name: testset_translation_id
         description: "FK to ML_TESTSET_TRANSLATIONS"
       - name: evaluator
         description: "FK to ML_EVALUATORS"
+
+  - name: dbt_ml_testset_evaluations_average
+    description: "TODO. A summarized average of testsetevaluation results by Model and Evaluator."
+
