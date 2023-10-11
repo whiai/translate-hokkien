@@ -40,6 +40,9 @@ models:
       - name: evaluator
         description: "FK to ML_EVALUATORS"
 
+  - name: dbt_ml_testset_evaluations_expanded
+    description: "Expanded Evaluations, with their corresponding Sample Translations data. Via a join. Used to calculate summaries by translation-metadata."
+
   - name: dbt_ml_testset_evaluations_average
     description: "TODO. A summarized average of testsetevaluation results by Model and Evaluator."
 
