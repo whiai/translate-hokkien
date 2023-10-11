@@ -5,6 +5,8 @@
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
+### 2023-10-11
+- Reformatted the data as SQLITE3, and initialized a DBT Project from it.
 ### 2023-10-10
 - ![Data Models](https://github.com/whiai/translate-hokkien/blob/969de0244f372df7bfde60c52fb5fc50d373ab56/images/20231010-data-models.png?raw=true)
 - Reference Texts
