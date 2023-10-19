@@ -5,6 +5,8 @@
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
+### 2023-10-19
+- Continuing to replace more models, with dbt models.
 ### 2023-10-12
 - Management: Formatted the downstream 'ML_TESTSET_EVALUATIONS_AVERAGE' table as a dbt Model, as part of the pipeline.
 ### 2023-10-11
