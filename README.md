@@ -1,12 +1,12 @@
 # Translate Hokkien
 - The goal of this project is to create quality ML Hokkien Translations.
-- This project contains tools to help translate and evaluate English, Hokkien (POJ), and Hokkien (Hanzi). 
+- This project contains tools to help translate and evaluate English, Hokkien (POJ script), and Hokkien (漢字 script).
 - This project focuses on Text-to-Text translations. 
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
 ### 2023-10-19
-- Continuing to replace more models, with dbt models.
+- Management: Continuing to replace more data models, with dbt models.
 ### 2023-10-12
 - Management: Formatted the downstream 'ML_TESTSET_EVALUATIONS_AVERAGE' table as a dbt Model, as part of the pipeline.
 ### 2023-10-11
