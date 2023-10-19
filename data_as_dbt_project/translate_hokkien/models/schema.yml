@@ -35,11 +35,8 @@ models:
   - name: dbt_int_omniglot_preunion
     description: "Prepping Omniglot Data for Mart"
 
-  - name: dbt_mart_samples_2
-    description: "A dbt-native version of the dbt mart. (Todo: Warnings/Comments columns)"
-
   - name: dbt_mart_samples
-    description: "A mart of TestSet Data (aka Samples). Should technically be derived from INT_WIKI_TRANSL and STG_OMNIGLOT (though right now, it's just raw data)."
+    description: "A mart of TestSet Data (aka Samples)."
 
   - name: dbt_ml_models_meta
     description: "ML Models. Some of these are ML Pipelines, instead of individual models."

@@ -1,27 +1,33 @@
+with wiki as (
+    select *
+    from {{ ref('dbt_int_wiki_preunion') }}
+),
 
-/*
-    Welcome to your first dbt model!
-    Did you know that you can also configure models directly within SQL files?
-    This will override configurations stated in dbt_project.yml
-
-    Try changing "table" to "view" below
-*/
-
--- {{ config(materialized='table') }}
-
-with source_data as (
-
-    select 1 as id
-    union all
-    select null as id
-
+omniglot as (
+    select *
+    from {{ ref('dbt_int_omniglot_preunion') }}
 )
 
-select *
-from MART_SAMPLES
-
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
-
--- where id is not null
+select
+    wiki.source_id as id,
+    wiki.source_origin,
+    wiki.source_id,
+    wiki.text_en,
+    wiki.text_nan_poj,
+    null as text_nan_tc,
+    wiki.text_en_comment,
+    wiki.text_nan_poj_comment,
+    null as text_nan_tc_comment
+from wiki
+union all
+select
+    (omniglot.source_id + 1000) as id,
+    omniglot.source_origin,
+    omniglot.source_id,
+    omniglot.text_en,
+    omniglot.text_nan_poj,
+    omniglot.text_nan_tc,
+    omniglot.text_en_comment,
+    omniglot.text_nan_poj_comment,
+    omniglot.text_nan_tc_comment
+from omniglot
