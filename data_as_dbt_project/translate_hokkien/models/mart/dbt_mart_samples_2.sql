@@ -14,7 +14,10 @@ select
     wiki.source_id,
     wiki.text_en,
     wiki.text_nan_poj,
-    null as text_nan_tc
+    null as text_nan_tc,
+    wiki.text_en_comment,
+    wiki.text_nan_poj_comment,
+    null as text_nan_tc_comment
 from wiki
 union all
 select
@@ -23,5 +26,8 @@ select
     omniglot.source_id,
     omniglot.text_en,
     omniglot.text_nan_poj,
-    omniglot.text_nan_tc
+    omniglot.text_nan_tc,
+    omniglot.text_en_comment,
+    omniglot.text_nan_poj_comment,
+    omniglot.text_nan_tc_comment
 from omniglot
