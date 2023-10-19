@@ -2,15 +2,6 @@
 version: 2
 
 models:
-  - name: dbt_int_wiki
-    description: "A model that should contain the cleaned text_nan_poj data from stg_wiki."
-    columns:
-      - name: id
-        description: "The primary key for this table"
-        tests:
-          - unique
-          - not_null
-
   - name: dbt_stg_wiki
     description: "A model that reflects the Hokkien (NAN) Wiki Data"
     columns:
@@ -20,8 +11,32 @@ models:
           - unique
           - not_null
 
+  - name: dbt_int_wiki
+    description: "A model that should contain the cleaned text_nan_poj data from stg_wiki."
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+
+  - name: dbt_int_wiki_transl
+    description: "English translations of int_wiki"
+
+  - name: dbt_int_wiki_joined
+    description: "All Wiki Data Joined"
+
+  - name: dbt_int_wiki_preunion
+    description: "Prepping Wiki Data for Mart"
+
+  - name: dbt_stg_omniglot
+    description: "Omniglot Data. Contains nan_poj, nan_tc, en."
+
+  - name: dbt_int_omniglot_preunion
+    description: "Prepping Omniglot Data for Mart"
+
   - name: dbt_mart_samples
-    description: "A mart of TestSet Data (aka Samples). Should technically be derived from INT_WIKI_TRANSL and STG_OMNIGLOT (though right now, it's just raw data)."
+    description: "A mart of TestSet Data (aka Samples)."
 
   - name: dbt_ml_models_meta
     description: "ML Models. Some of these are ML Pipelines, instead of individual models."
