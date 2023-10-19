@@ -9,6 +9,7 @@ omniglot as (
 )
 
 select
+    wiki.source_id as id,
     wiki.source_origin,
     wiki.source_id,
     wiki.text_en,
@@ -17,6 +18,7 @@ select
 from wiki
 union all
 select
+    (omniglot.source_id + 1000) as id,
     omniglot.source_origin,
     omniglot.source_id,
     omniglot.text_en,
