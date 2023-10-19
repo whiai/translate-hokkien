@@ -29,6 +29,12 @@ models:
   - name: dbt_int_wiki_preunion
     description: "Prepping Wiki Data for Mart"
 
+  - name: dbt_stg_omniglot
+    description: "Omniglot Data. Contains nan_poj, nan_tc, en."
+
+  - name: dbt_int_omniglot_preunion
+    description: "Prepping Omniglot Data for Mart"
+
   - name: dbt_mart_samples
     description: "A mart of TestSet Data (aka Samples). Should technically be derived from INT_WIKI_TRANSL and STG_OMNIGLOT (though right now, it's just raw data)."
 
