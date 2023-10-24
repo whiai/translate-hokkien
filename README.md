@@ -5,6 +5,8 @@
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
+### 2023-10-24
+- ⚠️ Warning: Discovered the BLEU Score calculations were off 😅. Update with Corrected BLEU Scoring coming soon!
 ### 2023-10-19
 - Management: Continuing to replace more data models, with dbt models.
 ### 2023-10-12
