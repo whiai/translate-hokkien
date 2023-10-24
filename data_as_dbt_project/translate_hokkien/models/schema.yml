@@ -47,17 +47,20 @@ models:
   - name: dbt_ml_testset_translations
     description: "Resulting translations of testset sample data using different ML_MODELS."
 
-  - name: dbt_ml_testset_evaluations
-    description: "Resulting Evaluations on ml_testset_translations."
-    columns:
-      - name: testset_translation_id
-        description: "FK to ML_TESTSET_TRANSLATIONS"
-      - name: evaluator
-        description: "FK to ML_EVALUATORS"
+  - name: dbt_ml_testset_evaluations_v2_raw
+    description: "An echo of 'ML TestSet Evaluations', with corrected BLEU results."
 
-  - name: dbt_ml_testset_evaluations_expanded
-    description: "Expanded Evaluations, with their corresponding Sample Translations data. Via a join. Used to calculate summaries by translation-metadata."
+  # - name: dbt_ml_testset_evaluations
+  #   description: "Resulting Evaluations on ml_testset_translations."
+  #   columns:
+  #     - name: testset_translation_id
+  #       description: "FK to ML_TESTSET_TRANSLATIONS"
+  #     - name: evaluator
+  #       description: "FK to ML_EVALUATORS"
 
-  - name: dbt_ml_testset_evaluations_average
-    description: "A summarized average of testsetevaluation results by Model and Evaluator."
+  # - name: dbt_ml_testset_evaluations_expanded
+  #   description: "Expanded Evaluations, with their corresponding Sample Translations data. Via a join. Used to calculate summaries by translation-metadata."
+
+  # - name: dbt_ml_testset_evaluations_average
+  #   description: "A summarized average of testsetevaluation results by Model and Evaluator."
 
