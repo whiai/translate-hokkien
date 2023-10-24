@@ -2,6 +2,10 @@
 version: 2
 
 models:
+
+  - name: dbt_stg_moedict_with_en
+    description: "MoeDict Data, with English Column translation of zh_xc via GPT4 using prompt: 'You translate Mandarin Chinese into English.', temp: 0.5."
+
   - name: dbt_stg_wiki
     description: "A model that reflects the Hokkien (NAN) Wiki Data"
     columns:
