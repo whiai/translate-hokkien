@@ -1,12 +1,26 @@
 # Translate Hokkien
 - The goal of this project is to create quality ML Hokkien Translations.
-- This project contains tools to help translate and evaluate English, Hokkien (POJ script), and Hokkien (漢字 script).
+- This project contains tools to help translate and evaluate English, Hokkien (POJ script), Hokkien (Tai-Lo script), and Hokkien (漢字 script).
 - This project focuses on Text-to-Text translations. 
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
 ### 2023-10-24
-- ⚠️ Warning: Discovered the BLEU Score calculations were off 😅. Update with Corrected BLEU Scoring coming soon!
+- Added [MoeDict Dataset](https://github.com/g0v/moedict-data-twblg/blob/master/uni/%E4%BE%8B%E5%8F%A5.csv). It along with an "English" column (translated from Mandarin via GPT4).
+- Calculated BLEU Scores with new data.
+- ⚠️ Discovered previous BLEU Score calculations were off. Update with Corrected BLEU Scores!
+- (Data Structures: Refactored so they're easier to deal with.)
+- ![Evaluations on 10/24](https://github.com/whiai/translate-hokkien/blob/631ec6a55a3b7ee38ab4d0c8402dec03de6d4282/images/20231024-evaluations.png?raw=true)
+- Findings:
+	- English -> Hokkien (POJ script) - Initial naieve models have very low BLEU scores (1%)
+ 	- Mandarin -> Hokkien (漢字 script) - Has a much higher BLEU (7% to 17%). This is about half of what one would expect of a passable BLEU score (30%).
+		- GPT-3.5 Zero Shot: BLEU **7%**
+  		- GPT-3.5 Fine Tuned on 100 Examples: **10%**
+  		- GPT-4 Zero Shot: BLEU **13%**
+  		- GPT-3.5 Fine Tuned on 1,000 Examples: **16%**
+  			- _(Yup, a Fine-Tuned GPT3.5 Model surpases GPT-4 Zero Shot)_
+- Hypotheses: 
+	- For ZH->NAN(TC): given the change in Magnitude with Finetuning (0->100->1,000 Examples = 7%->10%->16% BLEU), it is foreseeable that if most of the MOEDICT dataset is used (~13,201 sentence pairs), then there's a chance the BLEU score could reach a passable level (30%).
 ### 2023-10-19
 - Management: Continuing to replace more data models, with dbt models.
 ### 2023-10-12
