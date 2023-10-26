@@ -5,6 +5,13 @@
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
+### 2023-10-26
+- Added Translations and Evaluations of: GPT-3.5 Fine Tuned on 12,000 Examples (Almost all of MoeDict samples), for Mandarin -> Hokkien (漢字 script).
+- Result: **BLEU score of 21**
+- ![Evaluations on 10/24](https://github.com/whiai/translate-hokkien/blob/2edb85aab91e3c4890c83832c6f59909d3a8ec5c/images/20231026-evaluations.png?raw=true)
+- Conclusions:
+	- A Finetuned GPT3.5 Model definitely performs better than a GPT4 Zero-Shot Model when there is **1000+** sentence-pairs.
+	- A Finetuned GPT3.5 Model with ~10,000 sentence pairs performs ~ **↑ 55%** better than GPT4 Zero-Shot, and ~ ↑ 282% better than GPT3.5 Zero-Shot.
 ### 2023-10-24
 - Added [MoeDict Dataset](https://github.com/g0v/moedict-data-twblg/blob/master/uni/%E4%BE%8B%E5%8F%A5.csv). It along with an "English" column (translated from Mandarin via GPT4).
 - Calculated BLEU Scores with new data.
