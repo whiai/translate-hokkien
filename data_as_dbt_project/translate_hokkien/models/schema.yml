@@ -6,6 +6,12 @@ models:
   - name: dbt_stg_moedict
     description: "MoeDict Data"
 
+  - name: dbt_int_moedict_en_transl
+    description: "MoeDict: English Column translation of zh_xc via GPT4 using prompt: 'You translate Mandarin Chinese into English.', temp: 0.5."
+
+  - name: dbt_int_moedict_taibun_scripts
+    description: "TAIBUN conversions of the nan_tc sentences in MoeDict Staging."
+
   - name: dbt_stg_wiki
     description: "A model that reflects the Hokkien (NAN) Wiki Data"
     columns:
