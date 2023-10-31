@@ -5,6 +5,8 @@
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
 ## Updates
+### 2023-10-31
+- Data Management; Moved basic MoeDict transformations to dbt Pipeline. Appended MoeDict data for Mart_sample usecases as well.
 ### 2023-10-26
 - Added Translations and Evaluations of: GPT-3.5 Fine Tuned on 12,000 Examples (Almost all of MoeDict samples), for Mandarin -> Hokkien (漢字 script).
 - Result: **BLEU score of 21**
