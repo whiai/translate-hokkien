@@ -12,6 +12,9 @@ models:
   - name: dbt_int_moedict_taibun_scripts
     description: "TAIBUN conversions of the nan_tc sentences in MoeDict Staging."
 
+  - name: dbt_mart_moedict_joined
+    description: "MoeDict table joined with English translations and Taibun Language Scripts."
+
   - name: dbt_stg_wiki
     description: "A model that reflects the Hokkien (NAN) Wiki Data"
     columns:
