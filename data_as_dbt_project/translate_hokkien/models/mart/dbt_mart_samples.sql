@@ -6,6 +6,11 @@ with wiki as (
 omniglot as (
     select *
     from {{ ref('dbt_int_omniglot_preunion') }}
+),
+
+moedict as (
+    select *
+    from {{ ref('dbt_mart_moedict_joined') }}
 )
 
 select
@@ -31,3 +36,15 @@ select
     omniglot.text_nan_poj_comment,
     omniglot.text_nan_tc_comment
 from omniglot
+union all
+select
+    (moedict.sentence_id + 2000) as id,
+    'moedict' as source_origin,
+    moedict.sentence_id as source_id,
+    moedict.en as text_en,
+    moedict.taibun_poj_south as text_nan_poj,
+    moedict.nan_tc as text_nan_tc,
+    'translated from original paired zh_xc' as text_en_comment,
+    'Taibun Southern-Dialect transliteration from nan_tc' as text_nan_poj_comment,
+    'original' as text_nan_tc_comment
+from moedict
