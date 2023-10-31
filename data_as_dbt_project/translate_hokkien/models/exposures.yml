@@ -1,0 +1,31 @@
+
+version: 2
+
+exposures:
+
+  - name: intra_nan_training
+    type: "ml"
+    maturity: high
+    description: >
+      For Intra-Nan ML Training (e.g. NAN_TC<>NAN_LATN)
+
+    depends_on:
+      - ref('dbt_mart_moedict_joined')
+
+    owner: 
+      name: "whiai"
+      email: "whiai@infuseai.io"
+    
+
+  - name: en_nan_training
+    type: "ml"
+    maturity: high
+    description: >
+      For English<->Hokkien ML Training
+
+    depends_on:
+      - ref('dbt_mart_samples')
+
+    owner: 
+      name: "whiai"
+      email: "whiai@infuseai.io"
