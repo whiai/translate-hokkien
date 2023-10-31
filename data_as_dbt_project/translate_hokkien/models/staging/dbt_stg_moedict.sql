@@ -18,7 +18,7 @@ with source_data as (
 )
 
 select *
-from STG_MOEDICT_WITH_EN
+from STG_MOEDICT
 
 /*
     Uncomment the line below to remove records with null `id` values
