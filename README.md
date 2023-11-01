@@ -4,6 +4,9 @@
 - This project focuses on Text-to-Text translations. 
 - *(Hokkien is also known as Minnan, Taiwanese, Hoklo, Southern Min, and iso 639-3: NAN.)*
 
+## Demo
+- [Try out the Online Demo of the latest Hokkien Translation Model](https://colab.research.google.com/drive/1gYZsaDNTLz8A-hip2vmgdteoHskCexNl?usp=sharing)
+
 ## Updates
 ### 2023-10-31
 - Data Management; Moved basic MoeDict transformations to dbt Pipeline. Appended MoeDict data for Mart_sample usecases as well.
