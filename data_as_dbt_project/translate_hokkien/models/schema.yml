@@ -15,6 +15,9 @@ models:
   - name: dbt_mart_moedict_joined
     description: "MoeDict table joined with English translations and Taibun Language Scripts."
 
+  - name: dbt_mart_moedict_nan_latn
+    description: "NAN_LATN (Hokkien ambiguous Latin script) generated with a set weightage for Human-Curated/Automated TaiLo/POJ Southern/Northern Hokkien. Used for creating ML Models that convert NAN_LATN->Other."
+
   - name: dbt_stg_wiki
     description: "A model that reflects the Hokkien (NAN) Wiki Data"
     columns:
