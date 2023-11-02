@@ -1,11 +1,11 @@
 with moedict_with_rand as (
     select 
         m.*,
-        r.value as rand
+        rand_table.value as r
     from 
         {{ ref('dbt_mart_moedict_joined') }} m
     join
-        {{ ref('dbt_stg_rand_30000') }} r on m.sentence_id = r.id
+        {{ ref('dbt_stg_rand_30000') }} rand_table on m.sentence_id = rand_table.id
 )
 
 select
@@ -27,5 +27,5 @@ select
         when r<.85 then 'taibun_poj_south'
         else 'taibun_poj_north'
     end as nan_latn_type,
-    rand
+    r as rand
 from moedict_with_rand
