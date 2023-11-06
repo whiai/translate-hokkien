@@ -18,7 +18,7 @@ with source_data as (
 )
 
 select *
-from ML_TESTSET_TRANSLATIONS
+from ML_EVALUATIONS_OLD
 
 /*
     Uncomment the line below to remove records with null `id` values
