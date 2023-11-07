@@ -8,6 +8,12 @@
 - [Try out the Online Demo of the latest Hokkien Translation Model](https://colab.research.google.com/drive/1gYZsaDNTLz8A-hip2vmgdteoHskCexNl?usp=sharing)
 
 ## Updates
+### 2023-11-07
+- Added Models, Translations, and Evaluations of Hokkien (Latin script*) -> Hokkien (漢字 script)
+- * Hokkien (Latin Script) = A mix of Manual and Automated Translations/Transliterations. Automated ones are a mix of Southern + Northern Hokkien Dialects, and also a mix of Tai-Lo and POJ scripts.
+- Results: Fine Tuned GPT3.5 achieved 30% BLEU (5x more than GPT4-Zero-Shot which got 6%).
+- Outcomes: This model would be useful for processing Hokkien Wikipedia, as it is the largest source of easily accessible Hokkien Texts.
+- ![Evaluations on 10/24](https://github.com/whiai/translate-hokkien/blob/da2eeff05cf03bdb64d18fc6da77afc2cfe43c8e/images/20231107-evaluations.png?raw=true)
 ### 2023-10-31
 - Data Management; Moved basic MoeDict transformations to dbt Pipeline. Appended MoeDict data for Mart_sample usecases as well.
 - ![Evaluations on 10/24](https://github.com/whiai/translate-hokkien/blob/c001c08785b206f0f49b2126bf288f37d0f74b61/images/20231031-lineage.png?raw=true)
