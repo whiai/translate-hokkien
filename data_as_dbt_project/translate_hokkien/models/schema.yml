@@ -60,11 +60,11 @@ models:
   - name: dbt_ml_evaluators
     description: "Evaluators. Mainly just based on BLEU scores for now."
 
-  - name: dbt_ml_testset_translations
-    description: "Resulting translations of testset sample data using different ML_MODELS."
+  - name: dbt_ml_translations_old
+    description: "Resulting translations of TESTSET sample data using different ML_MODELS. This is 'old' because newer translations data is stored in separate dbt models."
 
-  - name: dbt_ml_testset_evaluations_v2_raw
-    description: "An echo of 'ML TestSet Evaluations', with corrected BLEU results."
+  - name: dbt_ml_evaluations_old
+    description: "Evaluations of the translation quality of 'dbt_ml_translations_old'. With corrected BLEU results. This is 'old' because newer evaluations data is stored in separate dbt models."
 
   # - name: dbt_ml_testset_evaluations
   #   description: "Resulting Evaluations on ml_testset_translations."
